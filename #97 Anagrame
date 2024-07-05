@@ -1,0 +1,34 @@
+#include <iostream>
+#include <cstring>
+/*#include <fstream>
+std::string nume="vocmax";
+std::ifstream fin(nume+".in");
+std::ofstream fout(nume+".out");*/
+int fr1[123];
+int fr2[123];
+int main()
+{
+    std::string c1;
+    std::string c2;
+    std::cin>>c1>>c2;
+    if(c1.length()==c2.length())
+    {
+        for(int i=0;i<c1.length();i++)
+        {
+            fr1[int(c1[i])]++;
+            fr2[int(c2[i])]++;
+        }
+        for(int i=97;i<=122;i++)
+        {
+            if(fr1[i]!=fr2[i])
+            {
+                std::cout<<0;
+                return 0;
+            }
+        }
+        std::cout<<1;
+    }
+    else std::cout<<0;
+}
+//str.insert(5, " are ");
+//str.insert(poz,string/char);
